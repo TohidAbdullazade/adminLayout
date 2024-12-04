@@ -1,18 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AdminLayout from "./layout/adminLayout";
-import Admin from "./pages/admin";
-import Login from "./pages/login";
+import AdminLayout from "./layout/admin/adminLayout";
+import Admin from "./pages/admin/admin";
+import Login from "./pages/auth/login";
 
 const router = createBrowserRouter([
   {
-    path: "/admin",
+    path: "/",
     element: <AdminLayout />,
     children: [{ element: <Admin />, index: true }],
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
+  { path: "login", element: <Login /> },
 ]);
 
 export const Routes = () => {

@@ -4,8 +4,9 @@ import { useState } from "react";
 
 const Login = () => {
   const [adminForm] = useForm();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loginLoader, setLoginLoader] = useState<boolean>(false);
 
+  // Login Handler
   const handleLoginUser = () => {};
 
   // JSX
@@ -66,7 +67,7 @@ const Login = () => {
                 </Form.Item>
                 <Form.Item>
                   <Button
-                    loading={loading}
+                    loading={loginLoader}
                     className="w-[400px] mt-5 h-12 text-base poppins-medium"
                     type="primary"
                     htmlType="submit"
